@@ -15,13 +15,4 @@ public class CloudConfigClientAPI {
         SpringApplication.run(CloudConfigClientAPI.class, args);
     }
 
-    @Value("${user.role}")
-    private String role;
-
-
-    @GetMapping( value = "/whoami/{username}" )
-    public String whoami(@PathVariable("username") String username) {
-        return String.format("Hello! You're %s and you'll become a(n) %s...\n", username, role);
-    }
-
 }
