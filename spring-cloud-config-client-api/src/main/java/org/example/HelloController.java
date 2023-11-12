@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class HelloController {
 
-    @Value("${user.role}")
+    @Value("${user.role:#{null}}")
     private String role;
 
 
